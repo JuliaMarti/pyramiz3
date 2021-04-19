@@ -1,0 +1,127 @@
+a:hover{
+  text-decoration: none;
+}
+
+
+header {
+    background-color: #393738; 
+}
+
+header a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #f1f1f1;
+    display: block;
+}
+
+header a:hover {
+  color: #ff8032;
+}
+
+
+
+header h2{
+  margin-left:210px;
+  font-size:32px;
+  color:#f1f1f1;
+}
+
+nav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 300px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #393738; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* The navigation menu links */
+nav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #f1f1f1;
+  display: block;
+  border-bottom: 1px solid #1C1A1B;
+  padding: 10px;
+}
+
+/* When you mouse over the navigation links, change their color */
+nav a:hover{
+  color: #ff8032;
+  background-color:#494648;
+}
+
+nav img{
+  width:95%;
+  margin: auto;
+}
+
+/* Style page content */
+main {
+  margin-left: 300px; /* Same as the width of the sidebar */
+  width:calc(100hv -300px);
+  min-height: calc(100vh - 61px); 
+  background-color:#f1f1f1;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  nav {padding-top: 15px;}
+  nav a {font-size: 18px;}
+}
+
+
+
+nav i{
+  width:25px;
+  font-size: 18px;
+  color:#ff7520;
+}
+
+
+
+
+/* HOME, EMPRESA, CONFIGURACIÓN, PRODUCTOS */
+
+.cont-home h4, .cont-empresa h4, .cont-equipos h4{
+  color:#03224e;
+  margin-top:50px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cont-home .primer-h4, .cont-empresa .primer-h4{
+  margin-top:5px;
+}
+
+label h4{
+  margin-bottom: 0px;
+}
+
+.cont-home button, .cont-empresa button{
+  margin-top:20px;
+}
+
+.cont-home hr, .cont-empresa hr, .cont-configuracion button{
+  margin-top:5px;
+}
+
+
+/* PREGUNTAS */
+
+.cont-preguntas .pregunta-titulo{
+  color: #04367D;
+  font: normal normal 300 20px/30px Roboto Condensed;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+.cont-preguntas .pregunta-parrafo{
+  font: normal normal 300 18px/30px Roboto Condensed;
+  letter-spacing: 0px;
+  color: #707070;
+}

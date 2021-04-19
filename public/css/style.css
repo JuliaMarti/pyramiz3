@@ -1,0 +1,2124 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    letter-spacing: 0px;
+}
+
+
+
+/* Backgrounds */
+
+
+.blackBg{
+    background-color: #393738;
+}
+
+.darkBlackBg{
+    background-color:#1C1A1B;
+}
+
+.orangeBg{
+    background-color:#F87033;
+}
+
+.greyBg{
+    background-color:#F2F2F2;
+}
+
+
+
+/* Diseño general */
+
+
+h3{
+    text-align: center;
+    font: normal normal 300 40px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #F87033;
+    text-transform: uppercase;
+}
+
+
+
+
+div .nombre-producto{
+    font: normal normal normal 22px/30px Roboto Condensed;
+    color: #04367D;
+    text-transform: uppercase;
+}
+
+/* Header */
+
+
+.header-top{
+    font-size: 13px;
+    color: #FFFFFF;
+    font: normal normal 300 13px/30px Fira Sans;
+    letter-spacing: 0.43px;
+    display:flex;
+}
+
+.header-top a{
+    margin-left: 4px;
+    text-decoration: none;
+    color:white;
+    margin-bottom:0px;
+}
+
+.header-top-box{
+    display:flex;
+}
+
+.header-top-item{
+    display:flex;
+    align-items: center;
+    height:35px;
+
+}
+
+
+.header-top i{
+    margin-right: 4px;
+    font-size: 13px;
+    color: rgb(242,242,242,.66);
+}
+
+.header-top .fa-whatsapp{
+    color:#F87033;
+    margin-right:5px;
+    font-size: 11px;
+}
+
+.header-top .wsp::after{
+    content:" | ";
+    font-size: 21px;
+    margin-left:9px;
+    margin-right:4px;
+}
+
+/* Nav */
+
+
+nav{
+    font-size:13px;
+}
+
+nav img{
+    margin-top:13px;
+    height:70px;
+}
+
+nav ul{
+    padding-right: 0px;
+}
+
+.nav .nav-item{
+    height:96px;
+}
+
+.nav .nav-item .nav-link{  
+    height:96px;
+}
+
+.nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    transition: .1s;
+    font: normal normal normal 14px/30px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+    text-transform: uppercase;
+}
+
+.nav a:hover{ 
+    border-bottom: 3px solid#F87033;
+    font: normal normal normal 14px/30px Fira Sans;
+}
+
+.nav-link{
+    margin-left:21px;
+    padding:0px;
+}
+
+nav i{
+    width: 14px;
+    height: 13px;
+}
+
+.nav  .nav-item-active a{ 
+    color:#707070;
+    border-bottom: 3px solid #FD7522;
+    font: normal normal normal 14px/30px Fira Sans;
+}
+
+/* Header Bottom */
+
+.header-bottom{
+    display:flex;
+    align-items:center;
+    height: 99px;
+    background: #F4F4F4;
+    position:relative;
+    overflow: hidden;
+}
+
+
+.header-bottom .fondo{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    transform: rotate(321deg);
+    background-color: #F98D5C;
+    left: 35%;
+    top: -431%;
+    z-index:1;
+}
+
+
+
+.header-bottom-cont{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-bottom-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-bottom-cont h2{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #F6703D;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.header-bottom-cont h3{
+    font: normal normal 300 22px/23px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+    margin-bottom: 0;
+
+}
+
+/* BREADCRUMB  */
+
+.header-breadcrumb{
+    z-index: 3;
+    color: #FFFFFF;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.header-bottom a{
+    font: normal normal normal 12px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-decoration:none;   
+    text-transform: uppercase;
+    height: 30px;
+}
+
+.header-bottom a::after{
+    content:" | ";
+    margin-right:3px;
+}
+
+.header-bottom .active-link{
+    font: normal normal 300 12px/44px Fira Sans;
+}
+
+.header-bottom .active-link::after{
+    content:"";
+}
+
+
+
+
+/* Carousel */
+
+.carousel-home{
+    height:672px;
+    background: #F4F4F4 0% 0% no-repeat padding-box;
+    position:relative;
+    overflow: hidden;
+}
+
+.carousel-home .fondo{
+    position:absolute;
+    width: 1000px;
+    height: 1000px;
+    transform: rotate(70deg);
+    background-color: #F2C5B0;
+    left:43%;
+    top:-40%;
+}
+
+.carousel-home .carousel-item img{
+    margin-top: 1rem;
+    margin-left: 18rem;
+    width: 75%;
+}
+
+
+.carousel-home h2{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 55px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #F6703D;
+}
+
+.carousel-home h3{
+    font: normal normal 300 58px/61px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+    text-align: left;
+
+}
+
+.carousel-home p{
+    font: normal normal normal 23px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+}
+
+
+.carousel-home .carousel-texto{
+    text-align: left;
+}
+
+.carousel-home .carousel-caption {
+    position: absolute;
+    right: 5%;
+    bottom: 1.25rem;
+    left: 5%;
+    padding-top: 1.2rem;
+    padding-bottom: 9rem;
+    color: #fff;
+}
+
+.carousel-home .carousel-indicators{
+    justify-content: left;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 4rem;
+}
+
+.carousel-home button.btn-carousel{
+    width: 16px;
+    height: 16px;
+    border-radius:50%;
+    background: #707070 0% 0% no-repeat padding-box;
+}
+
+
+/* .carousel-inicio{
+    height:617px;
+}
+
+.carousel-inicio .carousel-inner{
+    height:100%;
+}
+
+.carousel-inicio .carousel-indicators{
+    margin-bottom:61px;
+}
+
+.carousel-inicio button.btn-carousel{
+    width: 16px;
+    height: 16px;
+    border-radius:50%;
+}
+
+.carousel-inicio h1{
+    text-transform: uppercase;
+    font: normal normal normal 53px/41px Roboto Condensed;
+}
+
+.carousel-inicio p{
+    font: normal normal 300 30px/41px Roboto Condensed;
+    margin-bottom:0px;
+    padding-bottom:221px;
+}
+ */
+
+
+/* Sección Home 1 */
+
+.home-sections {
+    color: #707070;
+    margin-top:73px;
+}
+
+
+.home-sections a{
+    text-decoration:none;
+    color: #707070;
+    font: normal normal normal 18px/39px Fira Sans;
+    letter-spacing: 0.59px;
+    margin-right:35px;
+}
+
+
+.home-sections i {
+    color:#F87033;
+    margin-right: 3px;
+}
+
+.home-sections p{
+    color: #707070;
+    font: normal normal 300 25px/28px Fira Sans;
+    margin-top:30px;
+}
+
+.home-sections hr{
+    border: 1.5px solid;
+    margin-top:35px;
+    margin-bottom:35px;
+
+}
+
+.home-sections h2 p{
+    text-transform: uppercase;
+    font: normal normal 300 36px/37px Fira Sans;
+    margin-top:0px;
+
+    
+}
+
+.home-sec-1 {
+    background-color: #393738;
+    padding:56px 35px 0px 30px;
+}
+
+.home-sec-1 h2 p{
+    font: normal normal 300 36px/37px Fira Sans;
+    margin-bottom: 0px;
+}
+
+.home-sec-2 {
+    background-color: #F3F3F3;
+    padding:159px 26px 50px 26px;
+    position:relative;
+}
+
+.home-sec-2 h2{
+    font: normal normal 300 32px/39px Fira Sans;
+    letter-spacing: 1.06px;
+}
+
+.home-sec-2 img{
+    margin-left: 26px;
+    position:absolute;
+    top:0;
+    left:0%;
+}
+
+
+
+
+/* Seccion Servicios*/
+
+
+.section-home-servicios {
+    margin-top: 79px;
+}
+
+.img-border-servicios {
+    padding-bottom: 42.7%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 31px;
+    margin-bottom: 15px;
+    padding-left: 16px;
+    position: relative;
+}
+
+ .img-border-servicios .text-box-servicios {
+     position: absolute;
+     bottom:5%;
+
+ }
+
+.section-home-servicios h4{
+    font: normal normal medium 18px/22px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section-home-servicios h5 {
+    font: normal normal 300 18px/22px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.section-home-servicios p {
+    font: normal normal normal 14px/19px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+    padding-left:16px;
+    padding-right:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Seccion Noticias*/
+
+.section-home-noticias {
+    margin-bottom: 83px;
+    margin-top:72px;
+}
+
+.img-border-noticias {
+    padding-bottom: 53.9%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top:31px;
+    margin-bottom: 15px;
+}
+
+
+.section-home-noticias h4{
+    font: normal normal 600 19px/22px Fira Sans;
+    letter-spacing: 0px;
+    color: #F87033;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.section-home-noticias h5 {
+    font: normal normal normal 24px/37px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+    margin-bottom: 0;
+}
+
+.section-home-noticias p {
+    font: normal normal normal 15px/22px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+
+}
+
+.btn-noticias{
+    background: #F87033 0% 0% no-repeat padding-box;
+    border: 1px solid #F6703D;
+    border-radius: 8px;
+    text-align: center;
+    font: normal normal bold 16px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width:173px;
+
+}
+
+.item-noticia{
+    display:flex; 
+    flex-direction:column; 
+    justify-content:space-between
+}
+
+
+
+
+
+/* Sección Representantes oficiales */
+
+.section-home-representantes  {
+    padding-top:51px;
+    background-color: #F3F3F3;
+}
+
+.section-home-representantes h3{
+    font: normal normal normal 30px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+}
+
+.carousel-representantes {
+    height: 152px;
+}
+
+.carousel-representantes .carousel-inner {
+    height: 100%;
+}
+
+.carousel-representantes .carousel-indicators {
+    margin-bottom: 10px;
+}
+
+.carousel-representantes button.btn-carousel {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.carousel-representantes h1 {
+    text-transform: uppercase;
+    font: normal normal normal 53px/41px Roboto Condensed;
+}
+
+.carousel-representantes p {
+    font: normal normal 300 30px/41px Roboto Condensed;
+    margin-bottom: 0px;
+    padding-bottom: 221px;
+}
+
+
+.img-representante{
+    padding-bottom: 55%;
+    height:130px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+
+
+
+
+
+/* Sección Equipos Destacados */
+
+
+.section-equipos-destacados{
+    background-color:white;
+    padding-top: 55px; 
+    padding-bottom: 85px;
+}
+
+
+.section-equipos-destacados h3{
+    margin-bottom:35px;
+}
+
+.section-equipos-destacados p{
+    margin-top:22px;
+}
+
+
+
+/* Sección Libellula */
+
+
+.section-libellula{
+    display:flex;
+    padding: 85px 46px 76px 72px;
+
+
+}
+
+.section-libellula img{
+    width: 515px;
+    height: 335px;   
+}
+
+.section-libellula p{
+    font: normal normal normal 39px/45px Roboto Condensed;
+    color: #04367D;
+    padding-top:10px; 
+    text-transform: uppercase;    
+}
+
+.section-libellula h2{    
+    font: normal normal 300 28px/45px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #FD7522;
+    margin-top:16.5px;
+    text-transform: uppercase;
+}
+
+.borde-info{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border: 1px solid #FD7522;
+    margin-top:50.47px;
+    width: 241px;
+    height: 48px;
+}
+
+.borde-info p{
+    margin-bottom:0px;
+    font: normal normal bold 15px/20px Roboto Condensed;
+    letter-spacing: 0.6px;
+    padding-top:0px;
+    color: #FD7522;
+}
+
+
+
+/* Sección Nuestra Misión */
+
+
+.section-nuestra-mision{
+    padding:70px 168px;
+    background-color:white;
+    text-align: center;
+    color: #04367D;
+}
+
+.section-nuestra-mision p{
+    font: normal normal 300 24px/41px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #707070;
+    margin-top:44px;
+}    
+
+hr{
+    color: rgba(112,112,112,0.8);
+    margin-bottom:10px;
+}
+
+
+
+
+/* Sección Krrass */
+
+
+.section-krrass{
+    padding:93px 168px;
+    color: #04367D;
+    z-index:-1;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.section-krrass:after{
+    content:"";
+    width:100%;
+    height:100%;
+    background-color:#04306E;
+    opacity: 0.28;
+    z-index:3;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.section-krrass p{
+    text-align: center;
+    font: normal normal 300 32px/41px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    z-index:5;
+}
+
+.section-krrass img{
+    z-index:5;
+    height:51px;
+    margin-bottom: 20px;
+}
+
+/* Sección Nuestros Productos */
+
+
+.section-nuestros-productos{
+    padding: 50px 0px  19px 0px;
+}
+
+.section-nuestros-productos h3{
+    margin-bottom:68px;
+}
+
+.section-nuestros-productos p{
+    margin-bottom:65px;
+    margin-top:22px;
+}
+
+
+
+/* Footer */
+
+
+
+.footer-top{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height:75px;
+    color:white;
+}
+
+.footer-top .icon-border{
+    border: 1px solid white;
+    width: 34px;
+    height: 34px;
+    margin-left: 19px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 50%;
+    font-size:18px;
+}
+
+.footer-top a{
+    text-decoration:none;
+    color: #FFFFFF;
+}
+
+.footer-top .border-wsp{
+    position: relative;
+    top:-37;
+    left:660%;
+    width: 75px;
+    height: 75px;
+    border-radius:50%;
+    background: #0DC143 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.footer-top .fa-whatsapp{
+    font-size: 37px;
+    color:#FFFFFF;
+}
+
+.footer-top a:hover{
+    text-decoration:none;
+    color:#FFFFFF;
+}
+
+.footer-info a{
+    text-decoration:none;
+    color: rgba(255,255,255,.48);
+}
+
+.footer-info a:hover{
+    text-decoration:none;
+    color:rgba(255,255,255,.48);
+}
+
+
+
+
+.footer-info{
+    background-color:#252324;
+    letter-spacing: 0px;
+    color:rgba(255,255,255,.48);
+}
+
+.footer-info img{
+    opacity: 0.2;
+}
+
+.footer-info col{
+    
+    height:204px;
+}
+
+.footer-info .footer-box{
+    padding-top:51px;
+    padding-bottom: 27px;
+}
+
+.footer-info p{
+    margin-bottom:6px;
+    height:17px;
+}
+
+.footer-info h5{
+    height:20px;
+    margin-bottom:17;
+    letter-spacing: 0px;
+    margin-bottom:17px;
+    font: normal normal bold 15px/36px Fira Sans;
+    color: #F87033;
+    
+}
+
+
+
+.col-contact{
+    padding-left: 91px;
+    padding-right: 0px;
+}
+
+.item-contact{
+    
+    font: normal normal normal 13px/16px Fira Sans;
+    display:flex;
+    justify-content:left;
+    margin-top:7px;
+}
+
+.item-contact a{
+    margin:0px;
+}
+
+.fa-map-marker-alt{
+    width: 12px;
+    height: 15px;
+}
+
+.fa-envelope{
+    width: 18px;
+    height: 14px;
+}
+
+.footer-info i{
+    margin-top: 3px;
+    margin-right:9px;
+    color:#F87033;
+}
+
+
+.footer-info .fa-whatsapp{
+    width: 14px;
+    height: 14px;
+}
+
+
+
+
+
+.footer-bottom{
+    border-top: 1px solid rgba(255, 255, 255, .28);
+    display:flex;
+    align-items:center;
+    height: 40px;
+}
+
+.footer-bottom p{
+    margin:0px;
+    font: normal normal normal 14px/50px Noto Sans;
+    letter-spacing: 0px;
+    color: rgba(255,255,255,.8);
+}
+
+
+
+
+@media (min-width: 1200px){
+.container {
+    max-width: 1242px;
+}}
+
+
+
+/* Página EMPRESA */
+
+
+.carousel-empresa{
+    height:396px;
+    position:relative;
+    overflow: hidden;
+}
+
+.carousel-empresa .fondo{
+    position:absolute;
+    width: 1000px;
+    height: 1000px;
+    transform: rotate(65deg);
+    background-color: #F4F4F4;
+    left:-40%;
+    top:-40%;
+    z-index: 1;
+  
+}
+
+.carousel-empresa .carousel-item .img{
+    margin-right: 0;
+    float:right;
+    width:75%;
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.carousel-empresa h2{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 55px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #F6703D;
+}
+
+.carousel-empresa h3{
+    font: normal normal 300 58px/61px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+    text-align: left;
+
+}
+
+.carousel-empresa p{
+    font: normal normal normal 23px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+}
+
+
+.carousel-empresa .carousel-texto{
+    text-align: left;
+    z-index: 5;
+}
+
+.carousel-empresa .carousel-caption {
+    position: absolute;
+    right: 5%;
+    bottom: 1.25rem;
+    left: 5%;
+    padding-top: 1.2rem;
+    padding-bottom: 9rem;
+    color: #fff;
+}
+
+.carousel-empresa .carousel-indicators{
+    justify-content: left;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 2rem;
+}
+
+.carousel-empresa button.btn-carousel{
+    width: 16px;
+    height: 16px;
+    border-radius:50%;
+    background: #707070 0% 0% no-repeat padding-box;
+}
+
+
+
+
+
+
+.section-empresa{
+    font: normal normal 300 15px/22px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+    padding: 40px 0px;
+}
+
+.section-empresa-imagen{
+    display: flex;
+}
+
+.section-empresa-imagen .imagen-text{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0px;
+    color: #F87033;
+    padding: 94px 72px 94px 40px;
+}
+
+
+
+
+
+
+/* PAGINA EQUIPOS */
+
+.section-nuestros-productos {
+    margin-top:22px;
+}
+
+
+.section-nuestros-productos .box-clase{
+    border: 1px solid rgba(112, 112, 112, .15);
+}
+
+
+.section-nuestros-productos .box-clase:hover {
+   box-shadow: 4px 4px 6px rgba(112, 112, 112, .15);
+}
+
+
+.section-nuestros-productos .img-border-equipos {
+    padding-bottom: 40.7%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 31px;
+    margin-bottom: 15px;
+    padding-left: 16px;
+}
+
+.section-nuestros-productos .box-clase p{
+    margin:20px;
+    text-align: center;
+    font: normal normal 300 20px/30px Fira Sans;
+    letter-spacing: 0.66px;
+    color: #393738;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+/* PAGINA BLOG */
+
+.img-border-blog{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 170px;
+    margin-right: 13px;
+    max-height: 130px;
+}
+
+.item-blog-text{
+    display:flex; 
+    flex-direction:column; 
+    justify-content:space-between;
+    max-height: 135px;
+    padding-right: 0;
+}
+
+.btn-blog{
+    text-decoration: none;
+    font: normal normal bold 14px/17px Fira Sans;
+    letter-spacing: 0.56px;
+    color: #F87033;
+    max-width: 70px;
+}
+
+.btn-blog:hover{
+    text-decoration: none;
+    font: normal normal bold 14px/17px Fira Sans;
+    letter-spacing: 0.56px;
+    color: #F87033;
+}
+
+.item-blog h4{
+    font: normal normal bold 15px/31px Fira Sans;
+    letter-spacing: 0px;
+    color: #F87033;
+    text-transform: uppercase;
+    height: 18px;
+}
+
+.item-blog h5{
+    font: normal normal normal 20px/46px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+}
+
+
+
+
+/* PAGINA NOTICIA*/
+
+.section-blog-noticia {
+    margin-top:42px;
+    margin-bottom: 54px;
+}
+
+.section-blog-noticia h4{
+    font: normal normal 600 19px/22px Fira Sans;
+    letter-spacing: 0px;
+    color: #F87033;
+}
+
+.section-blog-noticia h5{
+    font: normal normal normal 24px/37px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+    margin-bottom: 22px;
+}
+
+.section-blog-noticia p{
+    font: normal normal normal 15px/22px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+}
+
+.img-border-noticia{
+    padding-bottom: 60.61%;
+    margin-bottom: 23px;
+}
+
+.section-blog-noticia .list-group{
+    margin-left:43px;
+    margin-top:79px;
+}
+
+.blog-nav li{
+    
+    border: 1px solid rgba(228, 228, 228, .5);
+}
+
+.blog-nav li a{
+    font: normal normal normal 17px/46px Fira Sans;
+    letter-spacing: 0px;
+    color: #606163;
+    text-transform: uppercase;
+    display:flex;
+    justify-content: space-between;
+}
+
+.section-blog-noticia .ul-title{
+    font: normal normal 600 22px/26px Fira Sans;
+    border-bottom: 1px solid #F6703D;
+    color: #F87033;
+    text-transform: uppercase;
+
+}
+
+.section-blog-noticia span{
+    font: normal normal bold 11px/46px Fira Sans;
+    letter-spacing: 0px;
+    color: #F87033;
+}
+
+
+
+
+
+
+/* PAGINA SERVICIOS */
+
+.post-venta-item{
+    display: flex;
+    height: 257px;
+}
+
+.post-venta-item .imagen{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+
+
+
+.post-venta-item .text-display{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.post-venta-item .imagen-text{
+    background-color: rgba(112,112,112,0.08);   
+    padding-right: 4rem;
+    padding-left: 2rem;
+}
+
+.post-venta-item .imagen-text h4{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18;
+    letter-spacing: 0px;
+    color: #F87033;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+.post-venta-item .imagen-text p{
+    font: normal normal normal 14px/16px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;  
+}
+
+.post-venta-item .imagen-text h5{
+    font: normal normal 300 18px/22px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+    text-transform: uppercase; 
+    margin-bottom: 21px;
+}
+
+.post-venta-item .text-black{
+    background: #393738 0% 0% no-repeat padding-box;    
+    padding-left: 4rem;
+    padding-right: 2rem;
+}
+
+.post-venta-item .text-black p, .post-venta-item .text-black h5{
+    background: #393738 0% 0% no-repeat padding-box; 
+    color: #FFFFFF;   
+}
+
+
+
+.section-post-venta-contacto{
+    background: #F3F3F3 0% 0% no-repeat padding-box;
+    padding-top:49px;
+    padding-bottom: 53px;
+}
+
+.section-post-venta-contacto h2{
+    font: normal normal medium 32px/37px Fira Sans;
+    letter-spacing: 0px;
+    color: #F87033;
+    text-transform: uppercase;
+    margin-bottom:12px;
+}
+
+.section-post-venta-contacto p{
+    font: normal normal 300 25px/28px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+    margin-bottom: 46px;
+}
+
+.section-post-venta-contacto h4{
+    font: normal normal normal 17px/20px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+}
+
+.section-post-venta-contacto label{
+    font: normal normal normal 15px/25px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+}
+
+
+.box{
+    width:100%;
+    padding: 10px 17px;
+}
+
+input.box, textarea.box {
+    outline:none;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid rgba(112,112,112,0.88);
+    font: normal normal normal 12px/20px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+    box-shadow: 0px 5px 11px #8282821A;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    opacity: 0.88;
+    margin-bottom: 15px;
+}
+
+
+.section-post-venta-contacto .form-check-input{
+    border: 1px solid #707070;
+    border-radius: 5px;
+    opacity: 0.53;
+}
+
+.btn-post-venta{
+    background: #F87033 0% 0% no-repeat padding-box;
+    border: 1px solid #F6703D;
+    border-radius: 8px;
+    text-align: center;
+    font: normal normal bold 16px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-left: 50px;
+    padding-right: 50px;
+    width:100%;
+}
+
+
+
+
+
+/* PAGINA CONTACTO*/
+
+
+
+
+.section-direcciones{
+    margin-top:42px;
+}
+
+
+.section-direcciones .accordion{
+    padding-right: 0;
+}
+
+.section-direcciones iframe{
+    padding-left: 0;
+    width:100%;
+    height:553px;
+}
+
+.section-direcciones h3 button{
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+    font: normal normal normal 18px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: #393738 0% 0% no-repeat padding-box;
+    padding: 5px 24px;
+}
+
+.accordion .accordion-item .accordion-button:focus{
+    border-top: #09387B14 1px solid;
+    border-bottom: #09387B14 1px solid;
+    border-color: transparent;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%);
+    font: normal normal normal 18px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: #F87033 0% 0% no-repeat padding-box;
+}
+
+
+.accordion .accordion-item .accordion-button:focus-within{
+    border-top: #09387B14 1px solid;
+    border-bottom: #09387B14 1px solid;
+}
+
+.accordion-button:not(.collapsed){
+    border-top: #09387B14 1px solid;
+    border-bottom: #09387B14 1px solid;
+    border-color: transparent;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%);
+    font: normal normal normal 18px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: #F87033 0% 0% no-repeat padding-box;
+}
+
+.accordion-body{
+    font: normal normal normal 15px/22px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+    padding-bottom: 29px;
+}
+
+
+.accordeon-body-item{
+    display:flex;
+}
+
+.accordeon-body-item div p{
+    margin-bottom: 0;
+
+}
+
+.accordeon-body-item i{
+    margin-right: 8px;
+    margin-top:8px;
+    color:#F87033;
+}
+
+
+
+
+
+.section-contacto{
+    margin-top:72px;
+    margin-bottom:87px;
+}
+
+
+
+
+
+
+
+.section-contacto h2{
+    font: normal normal medium 32px/38px Fira Sans;
+    letter-spacing: 0px;
+    color: #F87033;
+    text-transform: uppercase;
+    margin-bottom:12px;
+}
+
+.section-contacto p{
+    font: normal normal 300 25px/21px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+    margin-bottom: 46px;
+}
+
+.btn-contacto{
+    background: #F87033 0% 0% no-repeat padding-box;
+    border: 1px solid #F6703D;
+    border-radius: 8px;
+    text-align: center;
+    font: normal normal bold 16px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-left: 50px;
+    padding-right: 50px;
+    width:50%;
+}
+
+
+
+
+
+
+
+
+
+
+/* PAGINA PRODUCTOS */
+
+
+
+.section-nuestros-productos .img-active {
+    position:relative;
+    z-index:1;
+}
+
+.section-nuestros-productos .img-active:hover:after{
+    content:"+";
+    display:flex; 
+    justify-content:center; 
+    align-items: center;
+    font-size:60px;
+    position:absolute;
+    font-weight: lighter;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: #08316b27;
+    color:white;
+    z-index:3;
+}
+
+
+
+/* PAGINA PLASMA Y OXICORTE */
+
+
+.section-plasma-oxicorte {
+    font: normal normal 300 23px/30px Roboto Condensed;
+    color: #707070;
+}
+
+
+.section-plasma-oxicorte .borde-info{
+    background-color: #FD7522;
+    margin-top:20px;
+}    
+
+/* .section-plasma-oxicorte p{  
+    height: 90px;
+}   */
+
+.section-plasma-oxicorte .borde-info p{
+    margin-top:0px;
+    color:white;
+    height: 20px;
+}    
+
+.section-plasma-oxicorte .borde-info a {
+    text-decoration: none;
+}   
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.table-plasma-oxicorte{
+    width: 100%;
+    margin: 96px 0px 64px 0px;
+    font: normal normal 300 20px/30px Roboto Condensed;
+    color: #707070;
+    text-align: center;
+}
+
+
+tbody th{
+    font: normal normal normal 20px/30px Roboto Condensed;
+    color: #04367D;
+    text-align: left;
+    padding: 11px 35px;
+}
+
+
+
+.table-plasma-oxicorte thead th{
+    color:white;
+    height:62px;
+    font: normal normal normal 22px/30px Roboto Condensed;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.table-plasma-oxicorte h4{
+    font: normal normal bold 20px/30px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #04367D;
+    text-transform: uppercase;
+    margin:0px;
+}
+
+.table-plasma-oxicorte .or1{
+    background-color: #FD914E;
+}
+
+.table-plasma-oxicorte .or2{
+    background-color: #FEAC7A;
+}
+
+.table-plasma-oxicorte tr:nth-child(odd) .a{
+    background-color: #F4F6F9;
+}
+
+.table-plasma-oxicorte tr:nth-child(odd) .b{
+    background-color: #F7F9FB;
+}
+
+.table-plasma-oxicorte tr:nth-child(even) .a{
+    background-color: #ECEFF5;
+}
+
+.table-plasma-oxicorte tr:nth-child(even) .b{
+    background-color: #F2F4F8;
+}
+
+
+
+
+/* PÁGINA SAMPLE CUT */
+
+
+.section-sample-cut{
+    background-color:#09387B0B;
+    height:424px;
+    padding:20px 0 56px 16px;
+
+}
+
+
+.section-sample-cut h3{
+    text-align: left;
+}
+
+.section-sample-cut p{
+    font: normal normal 300 23px/30px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #707070;
+}
+
+.button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+    width: 269px;
+    height: 48px;
+
+}
+
+.button p{
+    font: normal normal bold 15px/20px Roboto Condensed;
+    letter-spacing: 0.6px;
+    color: #FFFFFF;
+}
+
+
+
+
+
+.section-carecteristicas{
+    margin-left:62px;
+}
+
+.section-carecteristicas h3, .section-display-corte h3{
+    margin: 66px 0px;
+    text-align: left;
+    font: normal normal 300 25px/30px Roboto Condensed;
+    color: #04367D;
+}
+
+
+.section-carecteristicas li{
+
+    margin-bottom: 30px;
+}
+.section-carecteristicas li, .section-display-corte li {
+    font: normal normal normal 18px/30px Roboto Condensed;
+    color: #707070;
+    list-style-type: none;
+}
+
+.section-carecteristicas ul, .section-display-corte ul {
+    padding-left:0px;
+}
+
+.section-carecteristicas li::before, .section-display-corte li::before {
+    content: "◼";
+    color:#FD7522;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+.section-display-corte{
+    margin-top:79px;
+    background-color:#09387B0B;
+}
+
+.section-display-corte .text-box{
+    width:50%;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    padding-left: 69px;
+    padding-right: 0px;
+    font: normal normal normal 18px/50px Roboto Condensed;
+}
+
+.section-display-corte .img-box{
+    width:50%;
+    background-size: cover; 
+}
+.section-display .img-box{
+    background-image: url("../img/display.jpg");
+    background-position: center 20%; 
+}
+
+.section-corte .img-box{
+    background-image: url("../img/corte.jpg");
+}
+
+
+
+
+
+.section-display, .section-corte{
+    display:flex;
+    justify-content: space-between;
+}
+
+.section-display-corte h3{
+    font: normal normal normal 25px/30px Roboto Condensed;
+    text-align: left;
+    margin-bottom:38px;
+    margin-top:0px;
+}
+
+
+.section-display-corte li{
+    line-height: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section-características-tecnicas{
+    margin-top:70px;
+    margin-bottom:45px;
+}
+
+.section-características-tecnicas h3{
+    text-align: left;
+    font: normal normal 300 25px/30px Roboto Condensed;
+}
+
+.section-características-tecnicas img{
+    margin:26px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box-table-especificaciones-tecnicas{
+    width: 90%;
+    margin-bottom: 47px;
+}
+
+.box-table-especificaciones-tecnicas .button{
+    margin-top: 41px;
+}
+.table-especificaciones-tecnicas{
+    width:100%;
+}
+.table-especificaciones-tecnicas thead th{
+    background:#04306E;
+    font: normal normal normal 22px/30px Roboto Condensed;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 16px 21px;
+    text-transform: uppercase;
+    
+}
+
+.table-especificaciones-tecnicas tbody .table-box{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    font: normal normal 300 20px/30px Roboto Condensed;
+    color: #707070;
+}
+
+
+
+.table-especificaciones-tecnicas td, .table-especificaciones-tecnicas th{
+    border-left: 1px solid white;
+}
+
+.table-especificaciones-tecnicas td{
+    width:50%;
+    padding: 12px 21px;
+} 
+
+.table-especificaciones-tecnicas h4{
+    font: normal normal normal 20px/30px Roboto Condensed;
+    color: #04367D;
+}
+
+.table-especificaciones-tecnicas p, .table-especificaciones-tecnicas h4{
+    margin:0;
+}
+.table-especificaciones-tecnicas tr:nth-child(odd) {
+    background-color: #F4F6F9;
+}
+
+.table-especificaciones-tecnicas tr:nth-child(even) {
+    background-color: #ECEFF5;
+}
+
+
+
+
+
+
+
+
+
+
+/* PAGINA DESCARGAS */
+
+.section-descargas{
+    margin-top: 49px;
+    margin-bottom: 60px;
+}
+
+.section-descargas p{
+    font: normal normal normal 20px/30px Roboto Condensed;
+    color: #707070;
+    margin-bottom: 59px;
+}
+
+.section-descargas .list-group-item{
+    font: normal normal 300 20px/49px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #04367D;
+    text-transform: uppercase;
+    padding: 0px 21px 0px 23px;
+}
+
+.section-descargas .list-group-item:active{
+    color: white;
+    background-color:#04367D;
+}
+
+
+
+.table-descargas{
+    width:100%;
+}
+
+.table-descargas tbody tr:nth-child(odd){
+    background-color: #09387B14;
+}
+
+.table-descargas tbody tr:nth-child(even) , .table-descargas th  {
+    background-color: #09387B0B;
+}
+
+.table-descargas th{
+    font: normal normal 300 18px/30px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #04367D;
+    text-transform: uppercase;
+    padding: 15px 31px 13px 33px;
+    text-align: center;
+}
+
+.table-descargas td{
+    font: normal normal 300 18px/30px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #707070;
+    padding: 15px 31px 13px 33px;
+    text-align: center;
+}
+
+.table-descargas i{
+    color:#04367D;
+}
+
+
+
+
+
+/* PAGINA VIDEOS */
+
+.section-videos{
+    margin-top:42px;
+}
+
+.section-videos .video{
+    margin-bottom:60px;
+}
+
+.section-videos h5{
+    font: normal normal 300 18px/21px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #04367D;
+    text-transform: uppercase;
+    margin-top:13px;
+}
+
+/* PAGINAS PREGUNTAS FRECUENTES */
+
+
+
+
+
+
+
+/* PAGINA SOLICITUD DE PRESUPUESTO */
+
+.section-solicitud-de-presupuesto{
+    margin-top:55px;
+    margin-bottom: 89px;
+}
+
+.section-solicitud-de-presupuesto h4{
+    font: normal normal 300 18px/30px Roboto Condensed;
+    color: #04367D;
+    text-transform: uppercase;
+    margin-top:16px;
+}
+
+.datos-personales h4{
+    margin-bottom: 25px;
+}
+
+
+.section-solicitud-de-presupuesto label{
+    font: normal normal 300 16px/19px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    line-height: 24px;
+}
+
+.section-solicitud-de-presupuesto textarea{
+    height: 130px;
+}
+
+
+.section-solicitud-de-presupuesto .form-check .form-check-input {
+    margin-right: 11px;
+}
+
+.section-solicitud-de-presupuesto .form-check {
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PAGINA CONTACTO VIEJO */
+
+/* .section-contacto{
+    margin-top:67px;
+    margin-bottom:64px;
+}
+
+.section-contacto .item-contact{
+    font: normal normal normal 16px/19px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 0.8;
+    margin-bottom: 16px;
+}
+
+
+.section-contacto p{
+    margin-bottom: 0px;
+}
+
+.section-contacto svg{
+    fill:#FD7522;
+    margin-left: 0px;
+    margin-right: 15px;
+}
+
+.section-contacto i{
+    color:#FD7522;
+    margin-left:0px;
+    margin-right: 15px;
+    width: 11px;
+    height: 11px;
+}
+
+
+.section-contacto input.box::placeholder, .section-contacto textarea {
+    font: normal normal 300 13px/15px Roboto Condensed;
+}
+
+.section-contacto label {
+    font: normal normal 300 15px/18px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #707070;
+    line-height: 24px;
+}
+
+.section-contacto .form-check .form-check-input {
+    margin-right: 11px;
+} */
+
+
+
+
+
+
+
+/* SECCION PRODUCTO  */
+
+.section-producto{
+    margin-top: 41px;
+    margin-bottom: 54px;
+}
+
+.section-producto .imagen-producto{
+    margin-left:14px;
+}
+
+.section-producto h4{
+    font: normal normal normal 22px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+    text-transform: uppercase;
+}
+
+.section-producto h5{
+    font: normal normal 300 18px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+    text-transform: uppercase;
+}
+
+.section-producto p{
+    font: normal normal 300 15px/22px Fira Sans;
+    letter-spacing: 0px;
+    color: #393738;
+}
