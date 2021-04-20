@@ -15,44 +15,45 @@ class CategoriesController extends Controller
     }
 
     public function create(){
-        return view('clases.create');
+        $categories = Category::where('parent_id', null)->orderBy('order')->get();
+        return view('categories.create', ['categories' => $categories]);
     }
 
-    public function store(Request $request){
+    public function store(Request $request, Category $category){
 
+        $category->parent_id = $request->parent_id;
+        $category->order     = $request->order;
+        $category->name      = $request->name;
 
-        $clase = Clase::create($request->all());
-
-        if ($request->hasFile('imagen')) {
-            $imagen = $request->file('imagen')->store('public/imagenes');
-            $clase->imagen = $imagen;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image')->store('public/imagenes');
+            $category->image = $image;
         }
 
-        $clase->save();
+        $category->save();
 
-        return redirect()->route('clases.index')->with('info','Clase creada con éxito');
+        return redirect()->route('categories.index')->with('info','Categoria creada con éxito');
     }
 
-    public function edit(Clase $clase){
-        return view('clases.edit', compact('clase'));
+    public function edit(Category $category){
+        $categories = Category::where('parent_id', null)->orderBy('order')->get();
+        return view('categories.edit', compact('category', 'categories'));
     }
 
-    public function update(Request $request, Clase $clase){
+    public function update(Request $request, Category $category){
 
-        $clase->update($request->all());
+        $category->parent_id = $request->parent_id;
+        $category->order     = $request->order;
+        $category->name      = $request->name;
 
-        if ($request->hasFile('imagen')) {
-            $imagen = $request->file('imagen')->store('public/imagenes');
-            $clase->imagen = $imagen;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image')->store('public/imagenes');
+            $category->image = $image;
         }
 
-        if (!$request->show) {
-            $clase->show = 0;
-        }
-        
-        $clase->save();
+        $category->save();
 
-        return redirect()->route('clases.index')->with('info','Clase actualizada con éxito');
+        return redirect()->route('categories.index')->with('info','Categoria actualizada con éxito');
     }
 
     public function destroy(Clase $clase){
