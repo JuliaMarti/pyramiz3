@@ -72,9 +72,9 @@ Route::delete('clases/{clase}',[App\Http\Controllers\ClaseController::class, 'de
 Route::get('categories/index', [App\Http\Controllers\CategoriesController::class, 'index'])->name('categories.index'); 
 Route::get('categories/create',[App\Http\Controllers\CategoriesController::class, 'create'])->name('categories.create');
 Route::post('categories',[App\Http\Controllers\CategoriesController::class, 'store'])->name('categories.store');
-Route::get('categories/{clase}/edit',[App\Http\Controllers\CategoriesController::class, 'edit'])->name('categories.edit');
-Route::put('categories/{clase}/update',[App\Http\Controllers\CategoriesController::class, 'update'])->name('categories.update');
-Route::delete('categories/{clase}',[App\Http\Controllers\CategoriesController::class, 'destroy'])->name('categories.destroy');
+Route::get('categories/{category}/edit',[App\Http\Controllers\CategoriesController::class, 'edit'])->name('categories.edit');
+Route::put('categories/{category}/update',[App\Http\Controllers\CategoriesController::class, 'update'])->name('categories.update');
+Route::delete('categories/{category}',[App\Http\Controllers\CategoriesController::class, 'destroy'])->name('categories.destroy');
 
 
 Route::get('alturas.index', [App\Http\Controllers\AlturaController::class, 'index'])->name('alturas.index'); 
