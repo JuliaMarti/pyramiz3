@@ -111,6 +111,17 @@
 
                     </div>
                 </li>
+                <li class="nav-item dropdown" style="height: 49px; position: relative;" >
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" style="position: absolute; top: 0;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <i class="fas fa-box"></i> Productos
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                        <a class="dropdown-item" href="{{ route('categories.index') }}"><i class="far fa-bookmark"></i>  {{ __('Categorias') }}</a>
+
+                    </div>
+                </li>
 
                 <a href="{{ route('servicios.index') }}"><i class="far fa-lightbulb"></i>  {{ __('Post Venta') }}</a>
 
