@@ -40,7 +40,7 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
         $noticias=Noticia::orderBy('orden')->get();
 
@@ -53,7 +53,7 @@ class WebController extends Controller
         $imagenes=Imagen::where('ubicacion','Home')->where('show',1)->orderBy('orden')->get();
 
 
-        return view('web.index',compact('breadcrumb','noticias','claseblogs','home','configuracion','servicios','representantes','imagenes','direcciones'));
+        return view('web.index',compact('breadcrumb','noticias','claseblogs','home','configuracion','servicios','representantes','imagenes','direccionesFooter'));
         // return $categorias;
     }
 
@@ -71,23 +71,23 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
         $empresas=Empresa::get();
         $empresa=$empresas->first();
 
         $imagenes=Imagen::where('ubicacion','Empresa')->where('show',1)->orderBy('orden')->get();
 
-        return view('web.empresa',compact('breadcrumb','home','empresa','configuracion','imagenes','direcciones'));
+        return view('web.empresa',compact('breadcrumb','home','empresa','configuracion','imagenes','direccionesFooter'));
     }
 
     public function servicios(){
 
         $breadcrumb = [
-            [ 'title'  => 'empresa', 'link' => 'web.home','cat'=> '' ],
+            [ 'title'  => 'servicios', 'link' => 'web.home','cat'=> '' ],
         ];
 
-        $title= 'empresa';
+        $title= 'servicios';
 
         $homes= Home::get();
         $home = $homes->first();
@@ -95,11 +95,11 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
         $servicios=Servicio::where('show',1)->orderBy('orden')->get();
 
-        return view('web.servicios',compact('breadcrumb','home','configuracion','servicios','direcciones'));
+        return view('web.servicios',compact('breadcrumb','home','configuracion','servicios','direccionesFooter'));
     }
 
     public function contactanos_post_venta(Request $request){
@@ -109,10 +109,35 @@ class WebController extends Controller
 
         return redirect()->route('web.servicios')->with('info','Mensaje enviado');
     }
+
+
+     public function ofertas(){
+
+        $breadcrumb = [
+            [ 'title'  => 'ofertas', 'link' => 'web.home','cat'=> '' ],
+        ];
+
+        $title= 'ofertas';
+
+        $homes= Home::get();
+        $home = $homes->first();
+
+        $configuraciones=Configuracion::get();
+        $configuracion=$configuraciones->first();
+
+        $direccionesFooter=Direccion::where('footer',1)->get();
+
+
+        return view('web.ofertas',compact('breadcrumb','home','configuracion','direccionesFooter'));
+    }
+
+
+
+    
     public function blogs($filtro){
 
         $breadcrumb = [
-            [ 'title'  => 'empresa', 'link' => 'web.home','cat'=> '' ],
+            [ 'title'  => 'blogs', 'link' => 'web.home','cat'=> '' ],
         ];
 
         $title= 'empresa';
@@ -123,11 +148,11 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
         $noticias=Noticia::orderBy('orden')->get();
 
-        return view('web.blogs.blogs',compact('breadcrumb','home','configuracion','noticias','filtro','direcciones'));
+        return view('web.blogs.blogs',compact('breadcrumb','home','configuracion','noticias','filtro','direccionesFooter'));
     }
 
     
@@ -145,17 +170,17 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
         $claseblogs=Claseblog::orderBy('orden')->get();
 
 
-        return view('web.blogs.noticia',compact('breadcrumb','home','configuracion','noticia','claseblogs','direcciones'));
+        return view('web.blogs.noticia',compact('breadcrumb','home','configuracion','noticia','claseblogs','direccionesFooter'));
     }
 
     public function equipos(){
         $breadcrumb = [
-            [ 'title'  => 'productos', 'link' => 'web.equipos.equipos','cat'=> '' ],
+            [ 'title'  => 'equipos', 'link' => 'web.equipos.equipos','cat'=> '' ],
         ];
 
         $homes= Home::get();
@@ -164,21 +189,21 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
         $clases=Clase::orderBy('orden')->get();
         $alturas=Altura::orderBy('orden')->get();
         $combustiones=Combustion::orderBy('orden')->get();
 
 
-        return view('web.equipos.equipos', compact('breadcrumb','home','configuracion','clases','alturas','combustiones','direcciones'));
+        return view('web.equipos.equipos', compact('breadcrumb','home','configuracion','clases','alturas','combustiones','direccionesFooter'));
     }
 
     public function equipos_clase(Clase $categoria){
 
         $breadcrumb = [
-            [ 'title'  => 'productos', 'link' => 'web.productos','cat'=> '' ],
-            [ 'title'  => $categoria->name, 'link' => 'web.productos.categoria', 'cat'=> $categoria->id ],
+            [ 'title'  => 'equipos', 'link' => 'web.equipos','cat'=> '' ],
+            [ 'title'  => $categoria->name, 'link' => 'web.equipos.categoria', 'cat'=> $categoria->id ],
         ];
 
         $homes= Home::get();
@@ -187,11 +212,11 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
-        $productos=Equipo::where('categoria_id',$categoria->id)->orderBy('orden')->get();
+        $equipos=Equipo::where('categoria_id',$categoria->id)->orderBy('orden')->get();
 
-        return view('web.equipos.clase', compact('breadcrumb','home','configuracion','categoria','productos','direcciones'));
+        return view('web.equipos.clase', compact('breadcrumb','home','configuracion','categoria','equipos','direccionesFooter'));
     }
 
     public function equipos_equipo(Equipo $producto){
@@ -202,17 +227,17 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
         
         $categoria= Clase::find($producto->categoria_id);
 
         $breadcrumb = [
-            [ 'title'  => 'productos', 'link' => 'web.productos','cat'=> '' ],
-            [ 'title'  => $categoria->nombre, 'link' => 'web.productos.categoria', 'cat'=> $categoria->id ],
-            [ 'title'  => $producto->nombre, 'link' => 'web.productos.producto', 'cat'=> $producto->id ],
+            [ 'title'  => 'equipos', 'link' => 'web.equipos','cat'=> '' ],
+            [ 'title'  => $categoria->nombre, 'link' => 'web.equipos.categoria', 'cat'=> $categoria->id ],
+            [ 'title'  => $producto->nombre, 'link' => 'web.equipos.producto', 'cat'=> $producto->id ],
         ];
 
-        return view('web.equipos.equipo', compact('breadcrumb','home','configuracion','categoria','producto','direcciones'));
+        return view('web.equipos.equipo', compact('breadcrumb','home','configuracion','categoria','producto','direccionesFooter'));
     }
 
     public function descargas(Descargable $descargable){
@@ -226,7 +251,7 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
         $descargables=Descargable::orderBy('orden')->get();
 
@@ -235,7 +260,7 @@ class WebController extends Controller
         $infos= Info::where('descargable_id', $desc_id)->orderBy('orden')->get();
 
 
-        return view('web.descargas', compact('breadcrumb','home','configuracion','descargables','desc_id','infos','direcciones'));
+        return view('web.descargas', compact('breadcrumb','home','configuracion','descargables','desc_id','infos','direccionesFooter'));
     }
 
     public function clientes(){
@@ -249,12 +274,12 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
         $clientes=Representante::orderBy('orden')->get();
 
 
-        return view('web.clientes', compact('breadcrumb','home','configuracion','clientes','direcciones'));
+        return view('web.clientes', compact('breadcrumb','home','configuracion','clientes','direccionesFooter'));
     }
 
     public function videos(){
@@ -268,12 +293,12 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
         $videos=Noticia::orderBy('orden')->get();
 
 
-        return view('web.videos', compact('breadcrumb','home','configuracion','videos','direcciones'));
+        return view('web.videos', compact('breadcrumb','home','configuracion','videos','direccionesFooter'));
     }
 
     public function preguntas_frecuentes(){
@@ -287,11 +312,11 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
         $preguntas=Pregunta::orderBy('orden')->get();
 
-        return view('web.preguntas_frecuentes', compact('breadcrumb','home','configuracion','preguntas','direcciones'));
+        return view('web.preguntas_frecuentes', compact('breadcrumb','home','configuracion','preguntas','direccionesFooter'));
     }
 
     public function solicitud_de_presupuesto(){
@@ -305,9 +330,9 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
-        return view('web.solicitud_de_presupuesto', compact('breadcrumb','home','configuracion','direcciones'));
+        return view('web.solicitud_de_presupuesto', compact('breadcrumb','home','configuracion','direccionesFooter'));
     }
 
 
@@ -322,13 +347,13 @@ class WebController extends Controller
         $configuraciones=Configuracion::get();
         $configuracion=$configuraciones->first();
 
-        $direcciones=Direccion::where('footer',1)->get();
+        $direccionesFooter=Direccion::where('footer',1)->get();
 
         $direcciones=Direccion::get();
 
 
         
-        return view('web.contacto', compact('breadcrumb','home','configuracion','direcciones','direccion'));
+        return view('web.contacto', compact('breadcrumb','home','configuracion','direccionesFooter','direcciones','direccion'));
     }
 
     public function contactanos(Request $request, $direccion_id){

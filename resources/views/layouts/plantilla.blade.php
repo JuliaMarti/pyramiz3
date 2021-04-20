@@ -68,23 +68,23 @@
                                 <li class="nav-item {{$breadcrumb[0]['title'] == 'empresa' ? 'nav-item-active' : '' }}">
                                     <a class="nav-link" href="{{ route('web.empresa') }}">EMPRESA</a>
                                 </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'empresa' ? 'nav-item-active' : '' }}">
+                                <li class="nav-item {{$breadcrumb[0]['title'] == 'equipos' ? 'nav-item-active' : '' }}">
                                     <a class="nav-link" href="{{ route('web.equipos.equipos') }}">EQUIPOS</a>
                                 </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'empresa' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.empresa') }}">PRODUCTOS</a>
+                                <li class="nav-item {{$breadcrumb[0]['title'] == 'productos' ? 'nav-item-active' : '' }}">
+                                    <a class="nav-link" href="{{ route('web.productos.productos') }}">PRODUCTOS</a>
                                 </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'empresa' ? 'nav-item-active' : '' }}">
+                                <li class="nav-item {{$breadcrumb[0]['title'] == 'servicios' ? 'nav-item-active' : '' }}">
                                     <a class="nav-link" href="{{ route('web.servicios',1) }}">POST VENTA</a>
                                 </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'empresa' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.empresa') }}">OFERTAS</a>
+                                <li class="nav-item {{$breadcrumb[0]['title'] == 'ofertas' ? 'nav-item-active' : '' }}">
+                                    <a class="nav-link" href="{{ route('web.ofertas') }}">OFERTAS</a>
                                 </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'empresa' ? 'nav-item-active' : '' }}">
+                                <li class="nav-item {{$breadcrumb[0]['title'] == 'blogs' ? 'nav-item-active' : '' }}">
                                     <a class="nav-link" href="{{ route('web.blogs','todas') }}">BLOG</a>
                                 </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'empresa' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.contacto',$direcciones->first->id) }}">CONTACTO</a>
+                                <li class="nav-item {{$breadcrumb[0]['title'] == 'contacto' ? 'nav-item-active' : '' }}">
+                                    <a class="nav-link" href="{{ route('web.contacto',$direccionesFooter->first->id) }}">CONTACTO</a>
                                 </li>
                             </ul>
                     </div>
@@ -195,36 +195,36 @@
                             <h5>SECCIONES</h5>
                             <p><a href="{{ route('web.empresa') }}" >EMPRESA</a></p>
                             <p><a href="{{ route('web.equipos.equipos') }}" >EQUIPOS</a></p>
-                            <p><a href="{{ route('web.empresa') }}" >PRODUCTOS</a></p>
+                            <p><a href="{{ route('web.productos.productos') }}" >PRODUCTOS</a></p>
 
                         </div>
 
                         <div class="col d-none d-sm-none d-md-block" style="padding-top:37px;">
-                            <p><a href="{{ route('web.empresa') }}" >SERVICIOS</a></p>
+                            <p><a href="{{ route('web.servicios') }}" >POST VENTA</a></p>
 
-                            <p><a href="{{ route('web.empresa') }}" >OFERTAS</a></p>
-                            <p><a href="{{ route('web.contacto',$direcciones->first->id) }}" >CONTACTO</a></p>
+                            <p><a href="{{ route('web.ofertas') }}" >OFERTAS</a></p>
+                            <p><a href="{{ route('web.contacto',$direccionesFooter->first->id) }}" >CONTACTO</a></p>
                             
                         </div>
 
-                        @foreach ($direcciones as $direccion)
+                        @foreach ($direccionesFooter as $itemDireccion)
                         <div class="col-3 p-0 d-none d-sm-none d-md-block">
-                            <h5>{{$direccion->nombre}}</h5>
+                            <h5>{{$itemDireccion->nombre}}</h5>
                     
                             <div class="item-contact" style="margin-bottom: 18px;">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <a href="https://g.page/camcnc?share" target=”_blank”>{{$direccion->direccion}}</a>
+                                <a>{{$itemDireccion->direccion}}</a>
                                 <p></p>
                             </div>
                             
                             <div class="item-contact" style="margin-bottom: 18px;">
                                     <i class="far fa-envelope"></i> 
-                                    <a href="mailto:{{$direccion->email}}" target=”_blank”>{{$direccion->email}}</a>
+                                    <a href="mailto:{{$itemDireccion->email}}" target=”_blank”>{{$itemDireccion->email}}</a>
                             </div>
                                 
                             <div class="item-contact" style="margin-bottom: 18px;">
                                 <i class="fas fa-phone-alt"></i>
-                                <div style="margin-bottom:16px;">{!!$direccion->telefonos!!}</div>
+                                <div style="margin-bottom:16px;">{!!$itemDireccion->telefonos!!}</div>
                             </div>
 
                         </div>

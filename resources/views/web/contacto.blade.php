@@ -17,14 +17,18 @@
             <div class="accordion accordion-flush col-4" id="accordionFlushExample">
                 @foreach ($direcciones as $i => $direccionItem)
                     @if ($direccionItem->show)
-                        
+
                         <div class="accordion-item">
                             <h3 class="accordion-header " id="flush-heading{{$i}}">
-                                <button class="accordion-button {{$loop->first ? '' : 'collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{$i}}" aria-expanded="{{$loop->first ? 'true' : 'false' }}" aria-controls="flush-collapse{{$i}}">
-                                    {{$direccionItem->nombre}}
-                                </button>
+
+                                <a href="{{route('web.contacto', $direccionItem->id)}}" style="text-decoration: none;">
+                                    <button class="accordion-button {{$direccion->id == $direccionItem->id ? '' : 'collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{$i}}" aria-expanded="{{$loop->first ? 'true' : 'false' }}" aria-controls="flush-collapse{{$i}}">
+                                        {{$direccionItem->nombre}}
+                                    </button>
+                                </a>
+
                             </h3>
-                            <div id="flush-collapse{{$i}}" class="accordion-collapse collapse {{$loop->first ? 'show' : '' }}" aria-labelledby="flush-heading{{$i}}" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapse{{$i}}" class="accordion-collapse collapse {{$direccion->id == $direccionItem->id ? 'show' : '' }}" aria-labelledby="flush-heading{{$i}}" data-bs-parent="#accordionFlushExample">
                                 
                                 
                                 <div class="accordion-body" >

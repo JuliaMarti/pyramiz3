@@ -91,6 +91,48 @@
                     </form>
                 </div>
             </section>
+
+
+            <section class="section-equipo-contacto">
+                <div class="container">
+                    <h2>Contactá con un experto</h2>
+                    <form method="POST" action="{{route('web.contactanos_post_venta')}}"> 
+                        @csrf
+                        <div class="row">
+                            <div class="col-4">
+                                <input class="box-equipo" name="nombre" placeholder="Ingresar nombre *">
+                                <input class="box-equipo" name="email" placeholder="Ingrese su correo electrónico *">
+                                <input class="box-equipo" name="empresa" placeholder="Empresa *">
+
+                            </div>
+
+                            <div class="col-4">
+                                <input class="box-equipo" name="telefono" placeholder="Ingrese número de teléfono*">
+                                <div> 
+                                    <textarea class="box-equipo" name="comentarios" style="padding-top:19px; min-height:128px;">Mensaje</textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <h4> Tipo de operación </h4>
+                                    <div class="form-check form-check-inline" style="margin-bottom: 5px;">
+                                        <input class="form-check-input" type="checkbox" name="reparaciones" value="1">
+                                        <label class="form-check-label">Venta</label>
+                                    </div>
+                                    <div class="form-check form-check-inline" style="margin-bottom: 5px;">
+                                        <input class="form-check-input" type="checkbox" name="repuestos_y_accesorios" value="1">
+                                        <label class="form-check-label">Alquiler</label>
+                                    </div>
+                            
+                                
+                                <button type="submit" class="btn-equipo" style="margin-top:25px;" >
+                                    ENVIAR 
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
 <!--FIN POST VENTA-->
 @endsection
 

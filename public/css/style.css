@@ -927,6 +927,7 @@ hr{
     display:flex;
     align-items:center;
     height: 40px;
+    overflow: hidden;
 }
 
 .footer-bottom p{
@@ -1101,6 +1102,83 @@ hr{
 
 
 
+
+
+/* PAGINA EQUIPO */
+
+
+.section-equipo-contacto {
+    background: #393738 0% 0% no-repeat padding-box;
+    padding-top: 52px;
+    padding-bottom: 87px;
+}
+
+.section-equipo-contacto h2 {
+    font: normal normal 300 28px/37px Fira Sans;
+    letter-spacing: 0px;
+    color: #F87033;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+
+.section-equipo-contacto h4 {
+    font: normal normal normal 17px/20px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.section-equipo-contacto label {
+    font: normal normal normal 15px/25px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin-left: 7px;
+    margin-right: 20px;
+}
+
+
+.box-equipo {
+    width: 100%;
+    padding: 17px 17px;
+}
+
+input.box-equipo,
+textarea.box-equipo {
+    outline: none;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid rgba(112, 112, 112, 0.88);
+    font: normal normal normal 12px/20px Fira Sans;
+    letter-spacing: 0px;
+    color: #707070;
+    box-shadow: 0px 5px 11px #8282821A;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    opacity: 0.88;
+    margin-bottom: 15px;
+}
+
+
+.section-equipo-contacto .form-check-input {
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    opacity: 0.53;
+    background-color: transparent;
+}
+
+.btn-equipo {
+    background: #F87033 0% 0% no-repeat padding-box;
+    border: 1px solid #F6703D;
+    border-radius: 8px;
+    text-align: center;
+    font: normal normal bold 16px/44px Fira Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+}
 
 
 

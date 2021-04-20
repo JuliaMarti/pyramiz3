@@ -12,15 +12,15 @@
             <form class="container">
                 <div class="row">
                 <div class="form-check col">
-                    <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck">
-                    <label class="form-check-label" for="disabledFieldsetCheck">
+                    <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck1">
+                    <label class="form-check-label" for="disabledFieldsetCheck1">
                     EN VENTA
                     </label>
                 </div>
 
                 <div class="form-check col">
-                    <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck">
-                    <label class="form-check-label" for="disabledFieldsetCheck">
+                    <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck2">
+                    <label class="form-check-label" for="disabledFieldsetCheck2">
                     EN ALQUILER
                     </label>
                 </div>

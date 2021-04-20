@@ -28,8 +28,13 @@ Route::get('equipos', [App\Http\Controllers\WebController::class, 'equipos'])->n
 Route::get('equipos/clase/{clase}', [App\Http\Controllers\WebController::class, 'equipos_clase'])->name('web.equipos.clase');
 Route::get('equipos/{equipo}', [App\Http\Controllers\WebController::class, 'equipos_equipo'])->name('web.equipos.equipo');
 
+Route::get('productos', [App\Http\Controllers\WebController::class, 'productos'])->name('web.productos.productos');
+
+
 Route::get('servicios', [App\Http\Controllers\WebController::class, 'servicios'])->name('web.servicios');
 Route::post('servicios/enviar', [App\Http\Controllers\WebController::class, 'contactanos_post_venta'])->name('web.contactanos_post_venta');
+
+Route::get('ofertas', [App\Http\Controllers\WebController::class, 'ofertas'])->name('web.ofertas');
 
 Route::get('blogs/{filtro}', [App\Http\Controllers\WebController::class, 'blogs'])->name('web.blogs');
 Route::get('blogs/noticia/{noticia}', [App\Http\Controllers\WebController::class, 'blogs_noticia'])->name('web.blogs.noticia');
