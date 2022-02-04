@@ -4,341 +4,54 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>@yield('title')</title>
-    
-
+        <link rel="icon" href="https://conexa.ai/wp-content/uploads/2021/03/favicon.png" sizes="192x192" />
     <!-- Bootstrap -->
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-
-{{-- RECAPTCHA --}}
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jodit/3.4.25/jodit.min.css">
 
     </head>
 
     <body>
-<!--INICIO HEADER-->
+        <div id="app">
+
         <header>
-                <div class="blackBg header-top">
-                    <div class="container" style="display: flex; justify-content: space-between;">
-                            <div class="fondo"></div>
-                            <div>
-                                <div class="header-top-box">
-                                    <div class="heaer-top-item wsp">
-                                        <a href="https://api.whatsapp.com/send?phone={{$configuracion->wsp}}" {{$configuracion->wsp ? 'target=”_blank”' : ''}}><i class="fab fa-whatsapp"></i>+{{$configuracion->wsp}}</a>
-                                    </div>
-        
-                                    <div class="header-top-item">
-                                        <a href="{{$configuracion->linkedin}}" {{$configuracion->linkedin ? 'target=”_blank”' : ''}}><i class="fab fa-linkedin-in"></i></a>
-                                    </div>                
-                                    <div class="header-top-item">
-                                        <a href="{{$configuracion->instagram}}" {{$configuracion->instagram ? 'target=”_blank”' : ''}}><i class="fab fa-instagram"></i></a>
-                                    </div>
-        
-                                    <div class="header-top-item">
-                                        <a href="{{$configuracion->facebook}}" {{$configuracion->facebook ? 'target=”_blank”' : ''}}><i class="fab fa-facebook-f"></i></a>
-                                    </div>
-                                </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <nav>
-                    <div class="container" style="display: flex; justify-content: space-between;">
-                            <a href="{{ route('web.home') }}" class="col-3">
-                                <img src="{{asset(Storage::url($home->logo))}}"  alt="Pyramiz">
-                            </a>
-                            <ul class="nav">
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'home' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.home') }}">INICIO</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'empresa' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.empresa') }}">EMPRESA</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'equipos' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.equipos.equipos') }}">EQUIPOS</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'productos' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.productos.productos') }}">PRODUCTOS</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'servicios' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.servicios',1) }}">POST VENTA</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'ofertas' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.ofertas') }}">OFERTAS</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'blogs' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.blogs','todas') }}">BLOG</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'contacto' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.contacto',$direccionesFooter->first->id) }}">CONTACTO</a>
-                                </li>
-                            </ul>
-                    </div>
-                </nav>  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-                {{-- <nav>
-                    <div class="container">
-                        <div class="row nav-row">
-                            <a href="{{ route('web.home') }}" class="col-3">
-                                <img src="{{asset(Storage::url($home->logo))}}"  alt="Pantógrafos CAM CNC">
-                            </a>
-                            <ul class="nav col-9">
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'empresa' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.empresa') }}">EMPRESA</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'productos' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.productos') }}">PRODUCTOS</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'descargas' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.descargas',1) }}">DESCARGAS</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'clientes' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.clientes') }}">CLIENTES</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'videos' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.videos') }}">VIDEOS</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'preguntas frecuentes' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.preguntas_frecuentes') }}">PREGUNTAS FRECUENTES</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'solicitud de presupuesto' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.solicitud_de_presupuesto') }}">SOLICITUD DE PRESUPESTO</a>
-                                </li>
-                                <li class="nav-item {{$breadcrumb[0]['title'] == 'contacto' ? 'nav-item-active' : '' }}">
-                                    <a class="nav-link" href="{{ route('web.contacto',$direcciones->first->id) }}">CONTACTO</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>            --}}
-        </header>
-
-        @if ($breadcrumb[0]['title'] !='home' && $breadcrumb[0]['title'] !='empresa' )
-            <div class="header-bottom">
-                <div class="fondo"></div>
-                <div class="container header-bottom-cont">
-                    <div class="header-bottom-text">
-                        <h2>gdsad</h2>
-                        <h3>sadas</h3>
-                    </div>
-                    <div class="header-breadcrumb">
-                        <a href="{{ route('web.home') }}">INICIO</a>
-                        @foreach ($breadcrumb as $key=> $bread)
-
-                            <a class="{{$key == (count($breadcrumb)-1) ? 'active-link' : ''}} " href="{{ route($bread['link'],$bread['cat'] ? $bread['cat'] : '' ) }}">{{$bread['title']}}</a>
-
-                         @endforeach
-                    </div>
-                </div>
+            <div class="container mt-4" style="margin-bottom: 80px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="219.41" height="63.547" viewBox="0 0 219.41 63.547"><defs><clipPath id="a"><path d="M849.86,226a3.149,3.149,0,0,0-1.4.337L823.494,240.75A3.325,3.325,0,0,0,822,243.3v13.3a1.091,1.091,0,0,0,1.109,1.108,2.952,2.952,0,0,0,2.94-2.94v-9.11a3.25,3.25,0,0,1,1.494-2.555l20.871-12.05a3.325,3.325,0,0,1,3.085.048l14.557,9.255c2.073,1.3,2.121,3.519.1,4.916l-1.349.964a3.385,3.385,0,0,1-3.182.145l-10.17-5.88a3.168,3.168,0,0,0-2.94,0l-12.773,7.326a3.326,3.326,0,0,0-1.494,2.555v14.219l-8.387,5.591c-2.121,1.4-2.073,3.663.048,4.965l22.558,13.978a3.227,3.227,0,0,0,3.037.048l24.968-14.412a3.325,3.325,0,0,0,1.494-2.555V259.933a2.952,2.952,0,0,0-2.94-2.94,1.091,1.091,0,0,0-1.109,1.109v11.761a3.325,3.325,0,0,1-1.494,2.555l-20.871,12.05a3.325,3.325,0,0,1-3.085-.048l-14.316-9.11c-2.217-1.4-2.169-3.663.048-5.013l1.4-.868a3.367,3.367,0,0,1,3.036-.048l9.881,5.688a3.17,3.17,0,0,0,2.94,0L862.1,268.9a2.978,2.978,0,0,0,1.06-4.049,1.1,1.1,0,0,0-1.542-.386l-10.17,5.881a3.17,3.17,0,0,1-2.94,0l-8.676-5.013a3.325,3.325,0,0,1-1.494-2.555V252.751a3.325,3.325,0,0,1,1.494-2.555l8.676-5.013a3.17,3.17,0,0,1,2.94,0l10.6,6.121a3.19,3.19,0,0,0,3.085-.1l8.917-5.88c2.121-1.4,2.073-3.663-.048-4.965l-22.558-13.978a2.863,2.863,0,0,0-1.494-.386Z" transform="translate(-822 -226)" fill="none"/></clipPath><clipPath id="b"><rect width="55.974" height="63.718" fill="none"/></clipPath><clipPath id="c"><rect width="55.961" height="63.673" fill="none"/></clipPath></defs><path d="M1121.87,324.967c0-7.278,5.447-12.436,13.159-12.436,4.724,0,8.483,1.976,10.363,5.639l-4.386,2.555a6.867,6.867,0,0,0-6.073-3.374c-4.193,0-7.375,2.892-7.375,7.616s3.181,7.616,7.375,7.616a6.977,6.977,0,0,0,6.073-3.374l4.386,2.555c-1.88,3.615-5.639,5.688-10.363,5.688C1127.317,337.4,1121.87,332.245,1121.87,324.967Z" transform="translate(-1053.57 -292.822)" fill="#1c1c1c"/><path d="M1246.56,324.967c0-4.627-3.085-7.616-7.23-7.616-4.1,0-7.182,2.94-7.182,7.616,0,4.627,3.085,7.616,7.182,7.616C1243.427,332.534,1246.56,329.594,1246.56,324.967Zm-20.148,0c0-7.278,5.447-12.436,12.918-12.436,7.568,0,12.966,5.158,12.966,12.436s-5.4,12.484-12.966,12.484C1231.859,337.4,1226.412,332.245,1226.412,324.967Z" transform="translate(-1134.301 -292.822)" fill="#1c1c1c"/><path d="M1377.977,323.183v13.93h-5.688V323.906c0-4.338-2.121-6.41-5.784-6.41-4.049,0-6.8,2.458-6.8,7.326v12.291h-5.688V312.82h5.4v3.133c1.88-2.217,4.82-3.422,8.387-3.422C1373.639,312.531,1377.977,315.857,1377.977,323.183Z" transform="translate(-1232.844 -292.822)" fill="#1c1c1c"/><path d="M1478.8,322.828h13.786a6.588,6.588,0,0,0-6.844-5.929A6.709,6.709,0,0,0,1478.8,322.828Zm19.088,3.759h-19.039c.675,3.567,3.615,5.832,7.857,5.832a8.68,8.68,0,0,0,6.6-2.651l3.037,3.519c-2.169,2.6-5.591,3.952-9.785,3.952-8.146,0-13.4-5.254-13.4-12.484s5.3-12.436,12.532-12.436c7.086,0,12.291,4.965,12.291,12.532C1497.988,325.382,1497.94,326.057,1497.892,326.587Z" transform="translate(-1324.851 -292.659)" fill="#1c1c1c"/><path d="M1597.516,338.094l-6.218-8.435-6.266,8.435h-6.266l9.447-12.339-9.062-11.954h6.314l5.977,7.953,5.977-7.953h6.122l-9.11,11.857,9.5,12.436Z" transform="translate(-1406.4 -293.803)" fill="#1c1c1c"/><path d="M1704.726,327.57c0,3.952-2.265,6.362-6.507,6.362-2.121,0-4.338-.723-4.338-3.085,0-3.663,5.543-4.145,9.447-4.145h1.4Zm-5.35-15.039a17.239,17.239,0,0,0-10.266,2.989l2.217,4.145a12.072,12.072,0,0,1,7.375-2.41c4.049,0,6.025,1.976,6.025,5.254v.386h-6.266c-7.375,0-10.074,3.181-10.074,7.23,0,4.242,3.519,7.278,9.062,7.278,3.615,0,6.266-1.2,7.664-3.278v2.94h5.351V322.846C1710.414,315.857,1706.365,312.531,1699.376,312.531Z" transform="translate(-1491.052 -292.822)" fill="#1c1c1c"/><g transform="translate(0 0)"><g clip-path="url(#a)"><g style="isolation:isolate"><g clip-path="url(#b)"><g transform="translate(0 0)"><g clip-path="url(#c)"><g clip-path="url(#c)"><image width="56.031" height="63.738" transform="translate(-0.036 -0.018)" xlink:href="data:image/png;base64,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"/></g></g></g></g></g></g></g></svg>
             </div>
-        @endif
-<!--FIN HEADER-->
+        </header>
     
         <main>
-
-            @yield('content')
-
+            
+                @yield('content')
+            
         </main>
 
 <!--INICIO FOOTER-->        
 
         <footer>
-            <div class="footer-top orangeBg">
-                <div style="width: 75px;"></div>
-                <a href="{{$configuracion->linkedin}}" {{$configuracion->linkedin ? 'target=”_blank”' : ''}} ><div class="icon-border"><i class="fab fa-linkedin-in"></i></div></a>
-                <a href="{{$configuracion->instagram}}" {{$configuracion->instagram ? 'target=”_blank”' : ''}}  ><div class="icon-border"><i class="fab fa-instagram"></i></div></a>
-                <a href="{{$configuracion->facebook}}" {{$configuracion->facebook ? 'target=”_blank”' : ''}}  ><div class="icon-border"><i class="fab fa-facebook-f"></i></div></a>
-                <a href="https://api.whatsapp.com/send?phone={{$configuracion->wsp}}"  {{$configuracion->wsp ? 'target=”_blank”' : ''}} ><div class="border-wsp"> <i class="fab fa-whatsapp"> </i></div> </a>
-            </div>
-
-            <div class="footer-info">
-                <div class="container footer-box">
-                    <div class="row">
-
-                        <div class="col-3 d-none d-sm-none d-md-block" >
-                            <img src="{{asset(Storage::url($home->logo_footer))}}">
-
-                        </div>
-
-                        <div class="col d-none d-sm-none d-md-block" >
-                            <h5>SECCIONES</h5>
-                            <p><a href="{{ route('web.empresa') }}" >EMPRESA</a></p>
-                            <p><a href="{{ route('web.equipos.equipos') }}" >EQUIPOS</a></p>
-                            <p><a href="{{ route('web.productos.productos') }}" >PRODUCTOS</a></p>
-
-                        </div>
-
-                        <div class="col d-none d-sm-none d-md-block" style="padding-top:37px;">
-                            <p><a href="{{ route('web.servicios') }}" >POST VENTA</a></p>
-
-                            <p><a href="{{ route('web.ofertas') }}" >OFERTAS</a></p>
-                            <p><a href="{{ route('web.contacto',$direccionesFooter->first->id) }}" >CONTACTO</a></p>
-                            
-                        </div>
-
-                        @foreach ($direccionesFooter as $itemDireccion)
-                        <div class="col-3 p-0 d-none d-sm-none d-md-block">
-                            <h5>{{$itemDireccion->nombre}}</h5>
-                    
-                            <div class="item-contact" style="margin-bottom: 18px;">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <a>{{$itemDireccion->direccion}}</a>
-                                <p></p>
-                            </div>
-                            
-                            <div class="item-contact" style="margin-bottom: 18px;">
-                                    <i class="far fa-envelope"></i> 
-                                    <a href="mailto:{{$itemDireccion->email}}" target=”_blank”>{{$itemDireccion->email}}</a>
-                            </div>
-                                
-                            <div class="item-contact" style="margin-bottom: 18px;">
-                                <i class="fas fa-phone-alt"></i>
-                                <div style="margin-bottom:16px;">{!!$itemDireccion->telefonos!!}</div>
-                            </div>
-
-                        </div>
-                        @endforeach
-                  
-                    </div>
-                </div>             
-            </div>
-
-            <div class=" footer-bottom darkBlackBg">
-                <div class="container">
-                    <p>© Copyright 2021 Pyramiz. Todos los derechos reservados</p>
-                </div>
+            <div class="container mt-3" style="text-align: end; margin-top:35px;">
+            <p>By Julia Martí</p>
+            
             </div>
         </footer>
+        </div>
 
 
+        <script type="text/javascript" src="{{ asset('js/app.js?7') }}"></script>
+        <script  type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
 
-
-
-
-
-
-{{-- 
-        <footer>
-            <div class="footer-top orangeBg">
-                <a href="{{$configuracion->instagram}}" target=”_blank” ><div class="icon-border"><i class="fab fa-instagram"></i></div></a>
-                <a href="{{$configuracion->facebook}}" target=”_blank” ><div class="icon-border"><i class="fab fa-facebook-f"></i></div></a>
-                <a href="{{$configuracion->youtube}}" target=”_blank” ><div class="icon-border"><i class="fab fa-youtube"></i></div></a>
-            </div>
-
-            <div class="footer-info blueBg">
-                <div class="container footer-box">
-                    <div class="row">
-                        <div class="col d-none d-sm-none d-md-block" >
-                            <h5>SECCIONES</h5>
-                            <p><a href="{{ route('web.empresa') }}" >EMPRESA</a></p>
-                            <p><a href="{{ route('web.productos') }}" >PRODUCTOS</a></p>
-                            <p><a href="{{ route('web.clientes') }}" >CLIENTES</a></p>
-                        </div>
-
-                        <div class="col d-none d-sm-none d-md-block" style="padding-top:37px;">
-                            <p><a href="{{ route('web.preguntas_frecuentes') }}" >PREGUNTAS FRECUENTES</a></p>
-                            <p><a href="{{ route('web.solicitud_de_presupuesto') }}" >SOLICITUD DE PRESUPUESTO</a></p>
-                            <p><a href="{{ route('web.contacto',$direcciones->first->id) }}" >CONTACTO</a></p>
-                        </div>
-
-                        <div class="col-3 p-0 d-none d-sm-none d-md-block">
-                            <h5>SUSCRIBITE AL NEWSLETTER</h5>
-                            
-                            <form method="POST" active="{{route('web.email')}}" >
-                                @csrf
-                                <div class="input-box">
-                                        <input type="text" placeholder="Ingresa tu email" name="email" id="nombreParaVincular" style="width:70%">
-                                        <button type="submit" class="orangeBg"> <i class="fas fa-caret-right"></i> </button>
-                                
-                                </div>
-                            </form>    
-
-                        </div>
-
-                        <div class="col-4 col-contact" style="line-height: 20px;">  
-                            <h5>CONTACTANOS</h5>  
-                            <div class="item-contact">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <a href="https://g.page/camcnc?share" target=”_blank”>{{$configuracion->direccion}}</a>
-                                <p></p>
-                            </div>
-                            
-                            <div class="item-contact">
-                                    <i class="far fa-envelope"></i> 
-                                    <a href="mailto:{{$configuracion->email}}" target=”_blank”>{{$configuracion->email}}</a>
-                            </div>
-                                
-                            <div class="item-contact">
-                                <!-- Icono en SVG porque no estaba disponible en Font Awesome -->
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="349.325px" height="349.324px" viewBox="0 0 349.325 349.324" style="enable-background:new 0 0 349.325 349.324;"xml:space="preserve">
-                                    <g>
-                                        <path d="M18.451,33.056C-8.6,73.651-6.972,151.824,42.83,207.313c46.215,51.491,115.158,108.634,115.735,109.101
-                                            c1.478,1.341,36.774,32.91,88.89,32.91c5.043,0,10.161-0.31,15.214-0.919c56.533-6.83,77.256-43.071,84.579-64.059
-                                            c3.782-10.801-2.585-24.196-13.914-29.254L266.985,225.6c-3.184-1.411-6.992-2.158-11.015-2.158c-8.2,0-16.432,3.042-21.47,7.937
-                                            l-20.911,20.262c-3.107,3.011-8.627,5.032-13.746,5.032c-2.188,0-4.118-0.386-5.57-1.122c-14.116-7.079-36.3-21.211-61.857-48.307
-                                            c-22.681-24.07-33.456-40.568-38.506-50.173c-2.821-5.373,0.127-14.678,4.552-19.096l18.603-18.596
-                                            c7.734-7.734,11.217-21.962,7.924-32.39L104.07,20.556C100.887,10.453,90.149,0,77.629,0C60.288,0.584,35.942,6.795,18.451,33.056
-                                            z M78.292,11.842c5.979,0.025,12.688,6.614,14.472,12.279l20.921,66.43c1.976,6.249-0.366,15.8-5.001,20.444l-18.606,18.59
-                                            c-7.599,7.6-12.093,22.673-6.66,32.989c5.39,10.248,16.765,27.729,40.37,52.783c26.743,28.351,50.196,43.259,65.158,50.77
-                                            c3.067,1.544,6.846,2.356,10.903,2.356c8.231,0,16.655-3.199,21.978-8.358l20.91-20.256c4.164-4.037,14.062-5.825,19.419-3.453
-                                            l66.354,29.492c5.058,2.25,9.45,9.075,7.551,14.508c-6.413,18.393-24.663,50.15-74.804,56.214
-                                            c-4.58,0.553-9.221,0.827-13.802,0.827c-46.996,0-79.704-28.741-81.133-30.011c-0.67-0.554-69.292-57.498-114.676-108.06
-                                            C7.081,149.737,3.598,76.686,28.302,39.619C43.002,17.562,63.591,12.34,78.292,11.842z"/>
-                                    </g>
-                                </svg>
-                                <a href="tel:{{$configuracion->tel_celular}}" target=”_blank”>{{$configuracion->tel_celular}}</a>
-                            </div>
-
-                            <div class="item-contact">
-                                <i class="fab fa-whatsapp"></i>
-                                <a href="https://api.whatsapp.com/send?phone={{$configuracion->wsp}}" target=”_blank”>+{{$configuracion->wsp}}</a>
-                            </div>
-                        </div>                    
-                    </div>
-                </div>             
-            </div>
-
-            <div class=" footer-bottom darkBlueBg">
-                <div class="container">
-                    <p>@Copyright 2021 Pantografos CAM CNC. Todos los derechos reservados</p>
-                </div>
-            </div>
-        </footer> --}}
-<!--FIN FOOTER-->    
-<!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-</body>
+    </body>
 </html>

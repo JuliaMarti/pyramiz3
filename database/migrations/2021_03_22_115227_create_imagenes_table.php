@@ -18,10 +18,8 @@ class CreateImagenesTable extends Migration
             $table->string('orden')->nullable();
             $table->boolean('show')->nullable()->default(false);
             $table->string('imagen')->nullable();
-            $table->string('titulo')->nullable();
-            $table->string('subtitulo')->nullable();
-            $table->string('ubicacion')->nullable();
             $table->longText('texto')->nullable();
+            $table->string('ubicacion')->nullable();
             $table->timestamps();
         });
     }

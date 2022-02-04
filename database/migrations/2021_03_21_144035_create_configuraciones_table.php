@@ -15,11 +15,12 @@ class CreateConfiguracionesTable extends Migration
     {
         Schema::create('configuraciones', function (Blueprint $table) {
             $table->id();
+            
             $table->string('wsp')->nullable();
-            $table->string('instagram')->nullable();
-            $table->string('facebook')->nullable();
-            $table->string('linkedin')->nullable();
-            $table->string('email_info')->nullable();
+            $table->string('tel')->nullable();
+            $table->string('direccion')->nullable();
+            $table->string('email')->nullable();
+            $table->longText('iframe')->nullable();
 
             $table->timestamps();
         });

@@ -15,10 +15,9 @@ class CreateEmpresasTable extends Migration
     {
         Schema::create('empresas', function (Blueprint $table) {
             $table->id();
-            $table->longText('parrafo_izquierda')->nullable();
-            $table->longText('parrafo_derecha')->nullable();
+            $table->longText('parrafo')->nullable();
             $table->string('imagen')->nullable();
-            $table->longText('parrafo_imagen')->nullable();
+
 
             $table->timestamps();
         });

@@ -17,15 +17,31 @@ class CreateHomesTable extends Migration
             $table->id();
             $table->string('logo')->nullable();
             $table->string('logo_footer')->nullable();
+            $table->longText('frase_footer')->nullable();
 
-            $table->boolean('seccion_1_show')->nullable()->default(false);
-            $table->string('seccion_1_titulo')->nullable();
-            $table->longText('seccion_1_parrafo')->nullable();
 
-            $table->boolean('seccion_2_show')->nullable()->default(false);
-            $table->string('seccion_2_titulo')->nullable();
-            $table->longText('seccion_2_parrafo')->nullable();
-             
+            $table->string('seccion_foto1')->nullable();
+            $table->longText('seccion_titulo1')->nullable();
+            $table->longText('seccion_texto1')->nullable();
+
+            $table->string('seccion_foto2')->nullable();
+            $table->longText('seccion_titulo2')->nullable();
+            $table->longText('seccion_texto2')->nullable();
+
+            $table->string('seccion_foto3')->nullable();
+            $table->longText('seccion_titulo3')->nullable();
+            $table->longText('seccion_texto3')->nullable();
+
+
+
+            $table->string('fogo_foto')->nullable();
+            $table->string('fogo_frase')->nullable();
+            $table->string('acc_foto')->nullable();
+            $table->string('acc_frase')->nullable();
+            $table->string('coc_foto')->nullable();
+            $table->string('coc_frase')->nullable();
+
+
             $table->timestamps();
         });
     }

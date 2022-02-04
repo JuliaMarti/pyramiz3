@@ -19,7 +19,24 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('ProductsCategories', require('./components/ProductsCategoriesComponent.vue').default);
+        // new Vue({
+        // el: "#app",
+        //     components: {
+        //         zoomOnHover: zoomOnHover
+        // }
+        // })
+
+
+
+Vue.component('conexa', require('./components/Conexa.vue').default);
+
+Vue.component('home', require('./components/Home.vue').default);
+Vue.component('travel', require('./components/Travel.vue').default);
+
+
+
+
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -27,8 +44,15 @@ Vue.component('ProductsCategories', require('./components/ProductsCategoriesComp
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
+
+Vue.filter('toCurrency',window.toCurrency);
+
+
+import zoomOnHover from './zoomOnHover.js';
 const app = new Vue({
     el: '#app',
+
 });
 
 
